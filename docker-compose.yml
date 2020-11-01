@@ -21,4 +21,3 @@ services:
       - "9988:9988"
     networks:
       - takeaway
-    entrypoint: ["python", "manage.py", "runserver", "0.0.0.0:9988"]

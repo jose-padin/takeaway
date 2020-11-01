@@ -63,6 +63,7 @@ class ProductCategory(models.Model):
     def __str__(self):
         return f'{self.category.name}: {self.product.name}'
 
+
 class Category(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(
@@ -72,7 +73,6 @@ class Category(models.Model):
         blank=False
     )
     products = models.ManyToManyField(Product, through=ProductCategory)
-    # product = models.ManyToManyField('Product')
 
     class Meta:
         db_table = 'category'

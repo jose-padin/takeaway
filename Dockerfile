@@ -6,6 +6,11 @@ LABEL maintainer='Jose Padin <jose.padin@kubicum.com>'
 
 ARG PROJECT_NAME=takeaway
 
+ENV TZ=${TZ:-Europe/Madrid} \
+    PIPENV_VENV_IN_PROJECT=${PIPENV_VENV_IN_PROJECT:-1} \
+    PIPENV_DOTENV_LOCATION=${PIPENV_DOTENV_LOCATION:-/project/.env} \
+    WORKON_HOME=${WORKON_HOME:-/project/.venv}
+
 # Run this commands inside container
 RUN apt update && \
 	apt upgrade -y && \
@@ -23,12 +28,17 @@ RUN apt update && \
 
 # set the working directory for any instruction that follow
 WORKDIR /project
+COPY project/.env /project
+COPY project/Pipfile /project/Pipfile
+
 RUN pip install --upgrade pip
 RUN pip install pipenv
-RUN python -m pip install Django
-RUN pip install uvicorn
-RUN pip install django-address
+RUN pipenv install
+
 COPY ./project /project
 
 # Expose a port to communicate between host and container
 EXPOSE 9988
+
+CMD ["pipenv", "run", "python", "manage.py", "runserver", "0.0.0.0:9988"]
+# CMD ["pipenv", "run", "uvicorn", "--reload", "--bind 0.0.0.0:9000", "takeaway.wsgi:application"]

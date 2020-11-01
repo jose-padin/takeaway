@@ -4,8 +4,15 @@ from django.shortcuts import render
 from ..forms.product import ProductForm
 from ..models.product import Product
 
+TEMPLATE = 'product'
+
 
 class ProductListView(ListView):
-    template_name = 'product/list.html'
-    queryset = Product.objects.all()
-    context_object_name = 'products'
+    model = Product
+
+    # context_object_name = 'products'
+
+
+    def get(self, request, *args, **kwargs):
+        products = Product.objects.all()
+        return render(request, f'{TEMPLATE}/list.html', {'products': products})

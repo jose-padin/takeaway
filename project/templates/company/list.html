@@ -1,0 +1,43 @@
+{% extends 'base/base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block content %}
+    {% for company in companies %}
+    <section id="" class="mt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-12 mb-4 border-0">
+                    <div class="card">
+                        <!-- Restaurant image -->
+                        <img src="" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <div class="badges">
+                                <span class="badge badge-warning"></span>
+                                <span class="badge badge-info"></span>
+                            </div>
+                            <h5 class="card-title">{{ company.name }}</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, 
+                                consectetur adipisicing elit. Sapiente delectus
+                                 repellendus ipsum quisquam, magni aut dolore 
+                                 repudiandae voluptatum vitae praesentium enim, 
+                                 natus libero. Ut alias, ratione repellendus libero, vero rem.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endfor %}
+    {% endblock %}
+    
+    {% block footer %}
+    {% include 'base/footer.html' %}
+    {% endblock %}
+</body>
+</html>

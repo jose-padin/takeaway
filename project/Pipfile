@@ -9,9 +9,10 @@ ipython = "==7.17.0"
 
 [packages]
 Django = "==3.1"
+django-address = "==0.2.5"
 django-cors-headers = "==3.5.0"
 gunicorn = "==20.0.4"
 Pillow = "==7.2."
 psycopg2-binary = "==2.8.5"
 pyopenssl = "==19.1.0"
-uvicorn = "==0.11.bookbook8
+uvicorn = "==0.11.8"
