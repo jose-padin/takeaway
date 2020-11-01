@@ -27,6 +27,7 @@ RUN pip install --upgrade pip
 RUN pip install pipenv
 RUN python -m pip install Django
 RUN pip install uvicorn
+RUN pip install django-address
 COPY ./project /project
 
 # Expose a port to communicate between host and container
