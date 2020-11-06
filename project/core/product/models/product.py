@@ -73,6 +73,7 @@ class Category(models.Model):
         blank=False
     )
     products = models.ManyToManyField(Product, through=ProductCategory)
+    company = models.ForeignKey(Company, on_delete=models.DO_NOTHING)
 
     class Meta:
         db_table = 'category'

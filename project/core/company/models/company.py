@@ -12,6 +12,8 @@ class Company(models.Model):
         blank=False
     )
     # address = AddressField(on_delete=models.CASCADE)
+    image = models.ImageField(null=True, blank=True)
+    logo = models.ImageField(null=True, blank=True)
 
     class Meta:
         db_table = _('company')
