@@ -38,7 +38,7 @@
                                 <p class="text-right pt-2">{{ product.price }} €</p>
                             </div>
                             <div class="col-1">
-                                <button type="button" class="btn btn-warning">+</button>
+                                <a class="btn btn-warning" href="{% url 'company:cart:add' company.id product.id %}">+</a>
                             </div>
                         </div>
                         <div class="row">
@@ -68,7 +68,7 @@
 
             </div>
         </div>
-        
+
     </div>
 </div>
 {% endblock %}
