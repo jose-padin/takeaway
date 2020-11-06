@@ -1,14 +1,8 @@
 {% extends 'base/base.html' %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    {% block content %}
-    {% for company in companies %}
+{% load static %}
+{% block content %}
+
+{% for company in companies %}
     <section id="" class="mt-4">
         <div class="container">
             <div class="row">
@@ -21,7 +15,10 @@
                                 <span class="badge badge-warning"></span>
                                 <span class="badge badge-info"></span>
                             </div>
-                            <h5 class="card-title">{{ company.name }}</h5>
+                            <div class="float-left mr-2">
+                                <img src="{% static company.logo %}" alt="">
+                            </div>
+                            <a href="{% url 'company:detail' company.id %}"><h5 class="card-title">{{ company.name }}</h5></a>
                             <p class="card-text">Lorem ipsum dolor sit amet, 
                                 consectetur adipisicing elit. Sapiente delectus
                                  repellendus ipsum quisquam, magni aut dolore 
@@ -33,11 +30,9 @@
             </div>
         </div>
     </section>
-    {% endfor %}
-    {% endblock %}
+{% endfor %}
+{% endblock %}
     
-    {% block footer %}
-    {% include 'base/footer.html' %}
-    {% endblock %}
-</body>
-</html>
+{% block footer %}
+{% include 'base/footer.html' %}
+{% endblock %}
