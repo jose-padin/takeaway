@@ -9,36 +9,15 @@
 		<title>{% block title %}{% endblock %}</title>
 	</head>
 	<body data-spy="scroll" data-target="#navbar" data-offset="57">
-		<nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-			<div class="container">
-				<a class="navbar-brand" href="#">
-					<!-- logo here -->
-				</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-
-				{% comment %}
-				<div class="collapse navbar-collapse border-0" id="navbar">
-					<ul class="navbar-nav ml-auto">
-					<li class="nav-item"></li>
-					<li class="nav-item"></li>
-					<li class="nav-item"></li>
-					<li class="nav-item"></li>
-					<li class="nav-item"></li>
-					</ul>
-				</div>
-				{% endcomment %}
-			</div>
-		</nav>
-
+		
+		{% block nav %}{% endblock %}
 		<!-- Big background-image here -->
 		{% block header %}
 		<main id="main">
 			<div id="carousel" class="carousel slide carousel-fade" data-ride="carousel" data-pause="false">
 				<div class="carousel-inner">
 					<div class="carousel-item active">
-					<img src="{% static 'food.jpg' %}" class="main-img d-block img-fluid w-100 h-50" alt="">
+					<!-- <img src="{% static 'food.jpg' %}" class="main-img d-block img-fluid w-100 h-50" alt=""> -->
 					</div>
 				</div>
 			</div>
