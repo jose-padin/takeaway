@@ -1,5 +1,10 @@
 {% extends 'base/base.html' %}
 {% load static %}
+
+{% block nav %}
+{% include 'base/nav.html' %}
+{% endblock %}
+
 {% block content %}
 
 {% for company in companies %}
