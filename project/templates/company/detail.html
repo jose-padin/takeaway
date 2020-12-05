@@ -13,64 +13,120 @@
 
         <!-- Nav -->
         <div class="col-3">
-            <div class="container mt-5 border">
+            {% comment %}
+            <div class="container mt-5 border bg-warning text-dark rounded">
                 {% for category in categories %}
                 <div class="row">
-                    <div class="col-6">
-                        {{ category.name }}
+                    <div class="col-12">
+                        <p class="text-center">{{ category.name }}</p>
                     </div>
                 </div>
                 {% endfor %}
             </div>
+            {% endcomment %}
         </div>
 
         <!-- Center -->
         <div class="col-6">
-            <div class="container border border-light">
-                {% for category in categories %}
-                <div class="container mt-3 pl-4">
-                    <h3>{{ category.name }}</h3>
+            {% for category in categories %}
+            <div class="card card-collapsable">
+                <a class="card-header" href="#collapseCardExample" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+                    {{ category.name }}
+                    <div class="card-collapsable-arrow">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </a>
+                <div class="collapse show" id="collapseCardExample">
+                    <div class="card-body">
+                        <div class="container mt-3 pl-4">
+                            <h3>{{ category.name }}</h3>
+                        </div>
+                            <ul>
+                            {% for product in category.products.all %}
+                            <div class="container border border-info rounded mb-2">
+                                <div class="row mt-1">
+                                    <div class="col-4">
+                                        <h4>{{ product.name }}</h4>
+                                    </div>
+                                    <div class="col-3"></div>
+                                    <div class="col-4">
+                                        <p class="text-right pt-2">{{ product.price }} €</p>
+                                    </div>
+                                    <div class="col-1">
+                                        <a class="btn btn-warning" href="{% url 'cart:add' product.id %}">+</a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <p>{{ product.description }}</p>
+                                    </div>
+                                    <div class="col-6"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        {% if product.allergens %}
+                                        <small>Allergens: {{ product.allergens }}</small>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
                 </div>
+                {% endfor %}
+            </div>
+            {% endfor %}
+        </div>
+        
+        <!-- Cart -->
+        <div class="col-3">
+            <div class="container  border bg-warning text-dark rounded">
+                <div class="row">
+                    <div class="col-4">
+                        <p>Carrito</p>
+                    </div>
+                    <div class="col-4"></div>
+                    <div class="col-4 text-right">
+                        <a href="{% url 'cart:list_cart' %}" class="btn btn-primary">Ver</a>
+                    </div>
+                </div>
+
+                <div class="container">
                     <ul>
-                    {% for product in category.products.all %}
-                    <div class="container border border-info mb-2">
-                        <div class="row mt-1">
-                            <div class="col-4">
-                                <h4>{{ product.name }}</h4>
-                            </div>
-                            <div class="col-3"></div>
-                            <div class="col-4">
-                                <p class="text-right pt-2">{{ product.price }} €</p>
-                            </div>
-                            <div class="col-1">
-                                <a class="btn btn-warning" href="{% url 'company:cart:add' company.id product.id %}">+</a>
-                            </div>
+                    {% for product in cart.products %}
+                    <li>{{ product }}</li>
+                    {% endfor %}
+                    </ul>
+                </div>
+
+                <!-- Delete button -->
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <div class="row">
+                            <div class="col-4 border-top border-bottom mb-3">Nombre</div>
+                            <div class="col-4 border-top border-bottom mb-3">Cantidad</div>
+                            <div class="col-4 border-top border-bottom mb-3">Precio</div>
                         </div>
                         <div class="row">
-                            <div class="col-6">
-                                <p>{{ product.description }}</p>
+                            {% for item in products_in_cart %}
+                            <div class="col-4 border-bottom mb-2">
+                                {{ item.product.name }}
                             </div>
-                            <div class="col-6"></div>
+                            <div class="col-4 border-bottom mb-2">
+                                {{ item.quantity }}
+                            </div>
+                            <div class="col-4 border-bottom mb-2">
+                                {{ item.total }} €
+                            </div>
+                            {% endfor %}
                         </div>
                         <div class="row">
-                            <div class="col-12">
-                                {% if product.allergens %}
-                                <small>Allergens: {{ product.allergens }}</small>
-                                {% endif %}
+                            <div class="col">
+                                <a href="{% url 'cart:clear' company.id %}" class="btn btn-danger">Eliminar todo</a>
                             </div>
                         </div>
                     </div>
-                    {% endfor %}
-                    </ul>
-                {% endfor %}
-            </div>
-        </div>
-
-        <!-- Cart -->
-        <div class="col-3">
-            <div class="container mt-5 border">
-                Carrito
-
+                </div>
             </div>
         </div>
 

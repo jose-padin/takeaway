@@ -29,15 +29,7 @@ class Product(models.Model):
         decimal_places=2
     )
     company = models.ForeignKey(Company, on_delete=models.DO_NOTHING)
-    # category = models.ManyToManyField(Category, through='ProductCategory')
-    # category = models.ManyToManyField(
-    #     'category.Category',
-    #     # on_delete=models.DO_NOTHING,
-    #     # null=True,
-    #     # blank=True
-    #     # through='ProductCategory'
-    # )
-
+    
     class Meta:
         db_table = 'product'
         verbose_name = _('Product')
