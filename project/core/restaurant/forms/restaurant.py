@@ -3,6 +3,7 @@ import sys
 from pprint import PrettyPrinter
 
 from django import forms
+from django.core.exceptions import ValidationError
 from django.core.mail import send_mail
 from django.template import loader
 
@@ -14,16 +15,25 @@ class SendEmailForm(forms.Form):
         max_length='200',
         label='Nombre del restaurante'    
     )
-    postal_code = forms.IntegerField(
-        label='Código Postal'
-    )
-    mobile_phone = forms.IntegerField(
-        label='Móvil'
-    )
+    # postal_code = forms.IntegerField(
+    #     label='Código Postal',
+    #     min_value=1000,
+    #     max_value=52080,
+    #     error_messages={
+    #         'invalid': 'El código postal no existe',
+    #     }
+    # )
+    # mobile_phone = forms.IntegerField(
+    #     label='Móvil',
+    #     required=False
+    # )
     email = forms.EmailField(
-        label='Email'
+        label='Email',
+        # widget=forms.TextInput(attrs={
+        #     'placeholder': 'Email de contacto'
+        # })
     )
-
+        
     def send_email(self):
         template = loader.get_template('restaurant/email.html')
         url = 'http://localhost:9988/restaurant/add'
@@ -35,8 +45,33 @@ class SendEmailForm(forms.Form):
         send_mail(
             'Registro',
             None,
-            'mendezpadin.jose@gmail.com',
+            None,
             [self.cleaned_data['email']],
             fail_silently=False,
             html_message=html_message
         )
+
+class RegisterForm(forms.Form):
+    name = forms.CharField(
+        max_length='200',
+        label='Nombre del restaurante'    
+    )
+    postal_code = forms.IntegerField(
+        label='Código Postal',
+        min_value=1000,
+        max_value=52080,
+        error_messages={
+            'invalid': 'El código postal no existe',
+        }
+    )
+    mobile_phone = forms.IntegerField(
+        label='Móvil',
+        required=False,
+        min_value=1
+    )
+    email = forms.EmailField(
+        label='Email',
+        # widget=forms.TextInput(attrs={
+        #     'placeholder': 'Email de contacto'
+        # })
+    )
