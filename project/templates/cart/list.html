@@ -1,0 +1,46 @@
+{% extends 'base/base.html' %}
+
+{% block nav %}
+{% include 'base/nav.html' %}
+{% endblock %}
+
+{% block content %}
+<div class="row mt-3">
+    <div class="col-4"></div>
+    <div class="col-4">
+        <div class="container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>nombre</th>
+                        <th>cantidad</th>
+                        <th>precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in items %}
+                    <tr>
+                        <td>
+                            {{ item.product.name }}
+                        </td>
+                        <td>
+                            {{ item.quantity }}
+                        </td>
+                        <td>
+                            {{ item.total }} €
+                        </td>
+                    </tr>
+                    {% endfor %}    
+                    <tr>
+                        <th>Total:</th>
+                        <th></th>
+                        <th>{{ cart.total }} €</th>
+                        <th><a class="btn btn-green" href="{% url 'cart:checkout' %}">Pagar</a></th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="col-4"></div>
+</div>
+{% endblock %}

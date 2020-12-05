@@ -23,7 +23,8 @@ urlpatterns = [
     path('django-admin/', admin.site.urls),
     re_path(r'^', include(('core.company.urls.root', 'company'))),
     re_path(r'^product', include(('core.product.urls.root', 'product'))),
-    # re_path(r'^cart', include(('core.cart.urls', 'cart'))),
+    re_path(r'^cart/', include(('core.cart.urls.root', 'cart'))),
+    re_path(r'^restaurant/', include(('core.restaurant.urls.root', 'restaurant'))),
 ]
 
 

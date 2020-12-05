@@ -26,6 +26,7 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+# DJANGO_LOG_LEVEL = DEBUG
 
 ALLOWED_HOSTS = []
 
@@ -51,6 +52,7 @@ INSTALLED_APPS = [
     'core.order',
     'core.payment',
     'core.product',
+    'core.restaurant',
 ]
 
 MIDDLEWARE = [
@@ -138,3 +140,52 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 # for production environment (collectstatic)
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+# -----------------------------------------------------------------------------
+# Logger
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    # 'formatters': {
+    #         'default': {
+    #             'format': '[DJANGO] %(levelname)s %(asctime)s %(module)s '
+    #                       '%(name)s.%(funcName)s:%(lineno)s: %(message)s'
+    #         },
+    # },
+    'filters': {
+        'require_debug_true': {
+            '()': 'django.utils.log.RequireDebugTrue',
+        }
+    },
+    'handlers': {
+        'console': {
+            'filters': ['require_debug_true'],
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            # 'formatter': 'default',
+        },
+    },
+    'root': {
+        'handlers': ['console'],
+        # 'level': 'WARNING',
+        'level': 'DEBUG',
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+            'level': 'INFO',
+            'propagate': False,
+        }
+    },
+}
+
+
+# -----------------------------------------------------------------------------
+# Email
+DEFAULT_FROM_EMAIL = os.getenv('DJANGO_DEFAULT_FROM_EMAIL')
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = os.getenv('DJANGO_EMAIL_USE_TLS')
+EMAIL_HOST = os.getenv('DJANGO_EMAIL_HOST')
+EMAIL_HOST_USER = os.getenv('DJANGO_EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.getenv('DJANGO_EMAIL_HOST_PASSWORD')
+EMAIL_PORT = os.getenv('DJANGO_EMAIL_PORT')
