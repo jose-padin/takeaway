@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.conf import settings
 from django.utils.translation import gettext_lazy as _
 
 from core.order.models import Order
@@ -7,7 +7,7 @@ from core.order.models import Order
 
 class Delivery(models.Model):
     id = models.AutoField(primary_key=True)
-    user = models.ForeignKey(User, on_delete=models.DO_NOTHING)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.DO_NOTHING)
     delivery_date = models.DateTimeField(
         verbose_name=_('Delivery date'),
         default=None
