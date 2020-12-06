@@ -11,6 +11,8 @@ dumper = PrettyPrinter(indent=4, stream=sys.stderr).pprint
 
 
 class RegisterForm(forms.ModelForm):
+    password = forms.CharField(widget=forms.PasswordInput())
+
     class Meta:
         model = AdminUser
         fields = ['first_name', 'last_name', 'password', 'email', 'phone_number']

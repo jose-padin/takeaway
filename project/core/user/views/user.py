@@ -12,7 +12,7 @@ def add_admin(request):
 
         if form.is_valid():
             form.save()
-            return redirect('/')
+            return redirect('login:login')
     else:
         form = RegisterForm
 
