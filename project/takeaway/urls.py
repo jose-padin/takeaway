@@ -26,6 +26,7 @@ urlpatterns = [
     re_path(r'^cart/', include(('core.cart.urls.root', 'cart'))),
     re_path(r'^restaurant/', include(('core.restaurant.urls.root', 'restaurant'))),
     re_path(r'^user/', include(('core.user.urls.root', 'user'))),
+    re_path(r'^login', include(('core.authn.urls.root', 'login'))),
 ]
 
 

@@ -1,0 +1,33 @@
+{% extends 'base/base.html' %}
+
+{% block nav %}
+{% include 'base/nav.html' %}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="container">
+    {% for message in messages %}
+    
+    <div class="alert alert-danger">
+        <a class="close" href="#" data-dismiss="alert">×</a>
+    
+        {{ message }}
+    
+    </div>
+    {% endfor %}
+    <div class="row">
+        <form class="mt-4 mb-4" method="POST"> {% csrf_token %}
+            <div class="col-6 offset-3">
+                <table>
+                {{ form.as_table }}
+                </table>
+            </div>
+            <div class="col-4 offset-8 text-right mt-2">
+                <button type="submit" class="btn btn-green">Login</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
