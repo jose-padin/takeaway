@@ -18,15 +18,17 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, re_path, include
 
+from core.authn.views.views import login_user, logout_user
 
 urlpatterns = [
     path('django-admin/', admin.site.urls),
     re_path(r'^', include(('core.company.urls.root', 'company'))),
+    re_path(r'^login$', login_user, name='login'),
+    re_path(r'^logout$', logout_user, name='logout'),
     re_path(r'^product', include(('core.product.urls.root', 'product'))),
     re_path(r'^cart/', include(('core.cart.urls.root', 'cart'))),
     re_path(r'^restaurant/', include(('core.restaurant.urls.root', 'restaurant'))),
     re_path(r'^user/', include(('core.user.urls.root', 'user'))),
-    re_path(r'^login', include(('core.authn.urls.root', 'login'))),
 ]
 
 

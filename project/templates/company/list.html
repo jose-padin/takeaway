@@ -7,7 +7,7 @@
 
 {% block content %}
 <div class="row">
-    {% if category %}
+    {% if categories %}
         <div class="col-2 mb-4 mt-4 border text-center">
             <h3>Categories</h3>
             {% for category in categories %}
@@ -19,7 +19,7 @@
         <section id="" class="mt-4">
             <div class="container">
                 <div class="row">
-                    {% if company %}
+                    {% if companies %}
                         {% for company in companies %}
                             <div class="col-lg-12 mb-4 border-0">
                                 <div class="card">

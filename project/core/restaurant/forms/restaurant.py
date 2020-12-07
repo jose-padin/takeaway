@@ -6,6 +6,8 @@ from django import forms
 from django.core.mail import send_mail
 from django.template import loader
 
+from core.company.models import Company
+
 dumper = PrettyPrinter(indent=4, stream=sys.stderr).pprint
 
 
@@ -37,8 +39,12 @@ class SendEmailForm(forms.Form):
 
 class RegisterForm(forms.Form):
     name = forms.CharField(
+        label='Nombre del restaurante',
         max_length='200',
-        label='Nombre del restaurante'    
+    )
+    address = forms.CharField(
+        label='Dirección',
+        max_length=255,
     )
     postal_code = forms.IntegerField(
         label='Código Postal',
@@ -48,11 +54,25 @@ class RegisterForm(forms.Form):
             'invalid': 'El código postal no existe',
         }
     )
-    mobile_phone = forms.IntegerField(
-        label='Móvil',
-        required=False,
-        min_value=1
+    image = forms.ImageField(
+        label='Imagen principal',
+        required=False
     )
-    email = forms.EmailField(
-        label='Email',
+    logo = forms.ImageField(
+        label='Logo',
+        required=False
     )
+    
+    def is_valid(self, user):
+        # dumper('>>>>>')
+        # dumper(self.__dict__)
+        # dumper(user)
+        Company.objects.create(
+            name=self.data['name'],
+            address=self.data['address'],
+            postal_code=self.data['postal_code'],
+            image=self.data['image'],
+            logo=self.data['logo'],
+            admin=user
+        )
+        return self.data
