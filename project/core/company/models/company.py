@@ -9,15 +9,33 @@ class Company(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(
         max_length=120,
-        verbose_name=_('Company'),
+        verbose_name=_('name'),
         null=False,
         blank=False
     )
     # address = AddressField(on_delete=models.CASCADE)
-    image = models.ImageField(null=True, blank=True)
-    logo = models.ImageField(null=True, blank=True)
+    address = models.CharField(
+        verbose_name=_('address'),
+        max_length=255,
+        default=''
+    )
+    postal_code = models.IntegerField(
+        verbose_name=_('postal code'),
+        default=36600
+    )
+    image = models.ImageField(
+        verbose_name=_('image'),
+        null=True,
+        blank=True
+    )
+    logo = models.ImageField(
+        verbose_name=_('logo'),
+        null=True,
+        blank=True
+    )
     admin = models.ForeignKey(
         AdminUser,
+        verbose_name=_('admin'),
         null=True,
         on_delete=models.DO_NOTHING
     )

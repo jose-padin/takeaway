@@ -17,7 +17,8 @@ def company_list_view(request):
     template = 'company/list.html'
     companies = Company.objects.all()
     categories = Category.objects.all()
-
+    dumper(companies)
+    dumper(categories)
     return render(request, template, {
         'companies': companies,
         'categories': categories
