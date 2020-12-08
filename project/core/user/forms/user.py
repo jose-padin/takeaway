@@ -24,5 +24,6 @@ class RegisterForm(forms.ModelForm):
             password=make_password(self.data['password']),
             email=self.data['email'],
             phone_number=self.data['phone_number'],
-            type='Admin'
+            type=BaseUser.Types.USER,
+            username=self.data['email']
         )

@@ -15,10 +15,8 @@ dumper = PrettyPrinter(indent=4, stream=sys.stderr).pprint
 
 def company_list_view(request):
     template = 'company/list.html'
-    companies = Company.objects.all()
-    categories = Category.objects.all()
-    dumper(companies)
-    dumper(categories)
+    companies = Company.objects.filter()
+    categories = Category.objects.filter(is_deleted=False)
     return render(request, template, {
         'companies': companies,
         'categories': categories
@@ -34,5 +32,6 @@ def company_detail_view(request, company_id):
     return render(request, template, {
         'company': company,
         'categories': categories,
+        'cart': cart,
         'products_in_cart': items
     })

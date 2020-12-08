@@ -35,7 +35,12 @@
                         <th>Total:</th>
                         <th></th>
                         <th>{{ cart.total }} €</th>
-                        <th><a class="btn btn-green" href="{% url 'cart:checkout' %}">Pagar</a></th>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th><a class="btn btn-green btn-sm" href="{% url 'cart:checkout' %}">Pagar</a></th>
+                        <th><a class="btn btn-danger btn-sm" href="{% url 'company:list' %}">Volver</a></th>
+                        <th></th>
                     </tr>
                 </tbody>
             </table>
