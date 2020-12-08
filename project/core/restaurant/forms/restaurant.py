@@ -54,6 +54,11 @@ class RegisterForm(forms.Form):
             'invalid': 'El código postal no existe',
         }
     )
+    description = forms.CharField(
+        label='Descripción',
+        max_length=255,
+        required=True
+    )
     image = forms.ImageField(
         label='Imagen principal',
         required=False
@@ -68,6 +73,7 @@ class RegisterForm(forms.Form):
             name=self.data['name'],
             address=self.data['address'],
             postal_code=self.data['postal_code'],
+            description=self.data['description'],
             image=self.data['image'],
             logo=self.data['logo'],
             admin=user
