@@ -16,6 +16,9 @@ def login_user(request):
     template = 'authn/login.html'
     form = LoginForm()
 
+    if request.user.is_authenticated:
+        return redirect('company:list')
+
     if request.method == 'POST':
         form = LoginForm(request.POST)
         email = request.POST['username']

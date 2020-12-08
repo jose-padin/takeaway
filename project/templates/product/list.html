@@ -1,4 +1,37 @@
+{% extends 'base/base.html' %}
 
-{% for product in products %}
-{{ product }}
-{% endfor %}
+{% block nav%}
+{% include 'base/nav.html' %}
+{% endblock %}
+
+{% block content %}
+
+{% if products %}
+<div class="container mt-1 mb-5">
+    <div class="card card-header-actions mb-5">
+        <div class="card-header">
+            <div class="float-right">
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="datatable">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Nombre</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        {% for product in products %}
+                        <tr>
+                            <td>{{ product.name }}</a></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endblock %}

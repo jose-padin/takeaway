@@ -64,9 +64,6 @@ class RegisterForm(forms.Form):
     )
     
     def is_valid(self, user):
-        # dumper('>>>>>')
-        # dumper(self.__dict__)
-        # dumper(user)
         Company.objects.create(
             name=self.data['name'],
             address=self.data['address'],
@@ -76,3 +73,5 @@ class RegisterForm(forms.Form):
             admin=user
         )
         return self.data
+
+

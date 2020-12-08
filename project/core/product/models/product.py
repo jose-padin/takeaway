@@ -16,6 +16,8 @@ class Product(models.Model):
     description = models.CharField(
         max_length=255,
         verbose_name=_('Description'),
+        blank=True,
+        null=True
     )
     allergens = models.CharField(
         max_length=100,
@@ -24,11 +26,15 @@ class Product(models.Model):
         null=True
     )
     price = models.DecimalField(
-        verbose_name = _('Price'),
+        verbose_name=_('Price'),
         max_digits=8,
         decimal_places=2
     )
     company = models.ForeignKey(Company, on_delete=models.DO_NOTHING)
+    is_deleted = models.BooleanField(
+        verbose_name=_('Is deleted'),
+        default=False
+    )
     
     class Meta:
         db_table = 'product'
@@ -66,6 +72,10 @@ class Category(models.Model):
     )
     products = models.ManyToManyField(Product, through=ProductCategory)
     company = models.ForeignKey(Company, on_delete=models.DO_NOTHING)
+    is_deleted = models.BooleanField(
+        verbose_name=_('Is deleted'),
+        default=False
+    )
 
     class Meta:
         db_table = 'category'
@@ -74,6 +84,3 @@ class Category(models.Model):
 
     def __str__(self):
         return self.name
-
-
-
