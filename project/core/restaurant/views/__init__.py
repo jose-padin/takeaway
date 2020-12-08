@@ -1,1 +1,1 @@
-from .restaurant import add, form_sent, register
+from .restaurant import add, add_category, list_categories, form_sent, register, edit_category, delete_category

@@ -1,0 +1,42 @@
+{% extends 'base/base.html' %}
+
+{% block nav %}
+{% include 'base/nav.html' %}
+{% endblock %}
+
+{% block content %}
+<div class="alert alert-green" role="alert">
+    <h2 class="text-right text-dark">Crear categoría</h2>
+</div>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12 text-center">
+            <span>Restaurant:</span><h1>{{ company.name }}</h1>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <form class="mt-4 mb-4" method="POST"> {% csrf_token %}
+            <div class="col">
+                <table>
+                    {% if messages %}
+                    <tr>
+                        {% for message in messages %}
+                        <td class="alert alert-danger">
+                            {{ message }}
+                        </td>
+                        {% endfor %}
+                    </tr>
+                    {% endif %}
+                {{ form.as_table }}
+                </table>
+            </div>
+            <div class="col-4 offset-8 text-right mt-2">
+                <button type="submit" class="btn btn-green">Crear</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

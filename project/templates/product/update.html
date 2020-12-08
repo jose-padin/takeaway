@@ -1,0 +1,32 @@
+{% extends 'base/base.html' %}
+
+{% block nav %}
+{% include 'base/nav.html' %}
+{% endblock %}
+
+
+{% block content %}
+<div class="alert alert-green" role="alert">
+    <h2 class="text-right text-dark">Crear producto</h2>
+</div>
+
+<div class="container">
+    <div class="row">
+        <form class="mt-4 mb-4" method="POST"> {% csrf_token %}
+            <div class="col-12 offset-4">
+                {% if messages %}
+                    {% for message in messages %}
+                    <p class="alert alert-danger">{{ message }}</p>
+                    {% endfor %}
+                {% endif %}
+                <table>
+                    {{ form.as_table }}
+                </table>
+            </div>
+            <div class="col-4 offset-4 text-left">
+                <button type="submit" class="btn btn-green">Actualizar</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
