@@ -23,6 +23,10 @@ class Company(models.Model):
         verbose_name=_('postal code'),
         default=36600
     )
+    description = models.CharField(
+        verbose_name=_('description'),
+        max_length=255
+    )
     image = models.ImageField(
         verbose_name=_('image'),
         null=True,
@@ -39,7 +43,6 @@ class Company(models.Model):
         null=True,
         on_delete=models.DO_NOTHING
     )
-
     class Meta:
         db_table = _('company')
         verbose_name = _('Company')
