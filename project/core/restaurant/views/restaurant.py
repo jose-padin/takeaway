@@ -94,14 +94,12 @@ def list_categories(request):
         company=company,
         is_deleted=False
     )
-    dumper(categories)
     return render(request, template, {
         'categories': categories
     })
 
 
 def edit_category(request, category_id):
-    dumper(category_id)
     template = 'restaurant/update_category.html'
     context = {}
     category = get_object_or_404(Category, id=category_id)

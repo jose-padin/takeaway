@@ -37,5 +37,5 @@ def clear(request, company_id, **kwargs):
 
 def checkout(request):
     template = 'cart/checkout.html'
-    print('checkout')
+    
     return render(request, template)
