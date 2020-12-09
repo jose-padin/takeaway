@@ -39,12 +39,14 @@
                                             <span class="badge badge-warning"></span>
                                             <span class="badge badge-info"></span>
                                         </div>
-                                        <div class="float-left mr-2">
-                                            <img src="{% static company.logo %}" alt="">
-                                        </div>
-                                        <a href="{% url 'company:detail' company.id %}"><h5 class="card-title">{{ company.name }}</h5></a>
+                                        <a href="{% url 'company:detail' company.id %}">
+                                            <div class="float-left mr-2 company_logo d-flex align-items-center">
+                                                <img src="{% static company.logo %}" alt="" class="img-fluid mx-auto d-block">
+                                            </div>
+                                        </a>
+                                        <a href="{% url 'company:detail' company.id %}"><h4 class="card-title mt-3"><u>{{ company.name }}</u></h4></a>
                                         {% if company.description %}
-                                            <p class="card-text">{{ company.description }}</p>
+                                            <p class="card-text mx-auto">{{ company.description }}</p>
                                         {% else %}
                                             <p class="card-text">
                                                 Lorem ipsum dolor sit amet, 
