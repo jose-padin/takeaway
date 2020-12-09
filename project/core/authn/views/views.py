@@ -40,5 +40,8 @@ def login_user(request):
     
 
 def logout_user(request):
+    cart = request.session
+    cart.clear()
     logout(request)
+
     return redirect('/')

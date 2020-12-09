@@ -70,6 +70,15 @@ class Cart:
 
         self.update_session()
 
+    def remove(self, product):
+        if product in self.products:
+            if self._items[product.id].quantity == 1:
+                del self._items[product.id]
+            else:
+                self._items[product.id].quantity -= 1
+        
+        self.update_session()
+
     def clear(self):
         self._items = {}
         self.update_session()

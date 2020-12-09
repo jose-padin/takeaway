@@ -14,14 +14,15 @@ A aplicación está orientada a ser utilizada como un servizo web, polo que os s
 ### 2.1 Obxectivos
 Partimos aquí, antes de nada, de dar resposta a tres preguntas básicas que nos axudarán máis tarde a desenvolver mellor o plan estratéxico.
 
-#### 1) Que queremos satisfacer?
-O obxectivo principal é utilizar a aplicación para dinamizar o mercado actual e ofrecer ó sector hostaleiro unha alternativa máis para poder chegar a máis clientes ofrecendo novos servizos, como é o de pedir a distancia e servir a comida a domicilio. Na situación actual, é un mercado cunha ampla posibilidade de crecemento. Polo tanto, queremos servir de intermediarios entre os negocios hostaleiros e os seus clientes para que poida haber un mellor fluxo de comunicación-negocio entre eles.
+#### 2.1.1 Que queremos satisfacer?
+O obxectivo principal é utilizar a aplicación para dinamizar o mercado actual e ofrecer ó sector hostaleiro unha alternativa máis para poder chegar a un maior número de clientes ofrecendo novos servizos, como é o de pedir a distancia e servir a comida a domicilio. Na situación actual, é un mercado cunha ampla posibilidade de crecemento. Polo tanto, queremos servir de intermediarios entre os negocios hostaleiros e os seus clientes para que poida haber un mellor fluxo de comunicación / negocio entre eles.
 
-#### 2) Como o imos facer?
-Imos crear unha aplicación web (id est, aloxada nun servidor e accesible a través dun navegador web) na que os negocios hostaleiros se poden rexistrar e poden ofrecer os seus productos dunha forma rápida e directa ós seus posibles clientes, quen poderán solicitar estes produtos, xa sexa para que llos envíen ó seu domicilio ou para ir recollelos ó local do negocio.
+#### 2.1.2 Como o imos facer?
+Imos crear unha aplicación web (id est, aloxada nun servidor e accesible a través dun navegador web) na que os negocios hostaleiros se poidan rexistrar e poidan ofrecer os seus productos dunha forma rápida e directa ós seus posibles clientes, quen poderán solicitar estes produtos, xa sexa para que llos envíen ó seu domicilio ou para ir recollelos ó local do negocio.
 
-#### 3) A quen nos diriximos?
-En primeiro lugar, dirixímonos ós negocios hostaleiros que na situación actual están vendo disminuír os seus ingresos. Pero tamén nos diriximos ás persoas en xeral para que, a través da nosa aplicación, poida pedir comida a domicilio de forma rápida e sinxela.
+#### 2.1.3 A quen nos diriximos?
+En primeiro lugar, dirixímonos ós negocios hostaleiros que na situación actual están vendo disminuír os seus ingresos. Pero tamén nos diriximos ás persoas en xeral para que, a través da nosa aplicación, poidan pedir comida a domicilio de forma rápida e sinxela.
+
 
 ### 2.2 Motivación e xustificación da idea
 A idea xorde tralo análise da situación socio económica actual, derivada da expansión pandémica da covid-19. Moitas empresas están vendo reducidos os seus ingresos debido a medidas gobernamentais como as limitacións de horario de apertura dos negocios, o peche temporal destes ou o confinamento da poboación que, mentres intentan disminuír o impacto da enfermidade na sociedade e a frear a súa expansión, impiden que se manteña o nivel de movemento económico que se viña dando ata ese momento.
@@ -31,10 +32,10 @@ En conclusión, dadas as condicións actuais, é previsible que un proxecto así
 ### 2.3 Análise do microentorno: cinco forzas de Porter
 O modelo das cinco forzas de Porter establece un marco para analizar a competencia dentro dunha industria, de xeito que se poida desenvolver unha estratexia de negocio. Estas cinco forzas operan no entorno inmediato dunha organización, e afectan á habilidade desta para satisfacer ós seus clientes e obter rendibilidade.
 
-#### 1. Ameaza de novos competidores
+#### 2.3.1 Ameaza de novos competidores
 Este punto refírese ás barreiras de entrada existentes no sector. Canto máis fácil sexa entrar, maior será a ameaza.
 
-Requerimentos de capital:
+Requirimentos de capital:
 Lanzar un negocio deste tipo non require, inicialmente, dun excesivo capital inical. Basicamente precisarase do capital necesario para mercar un para de ordenadores para realizar o traballo. En canto ós empregados, nun principio será suficiente, mentres non medre o negocio, de como máximo catro persoas: dous programadores, unha persoa para atención ó cliente e outra para márketing.
 
 Diferenciación do produto:
@@ -53,10 +54,10 @@ A localización no noso caso non é realmente importante, xa que a comunicación
 Curva da experiencia:
 Está claro que canto máis tempo leve unha empresa funcionando, máis experiencia vai ter e mellor poderá solventar as posibles dificultades que aparezan. Nun primeiro momento non gozaremos da suficiente experiencia, pero poderá solucionarse cunha previa preparación e estudo do entorno.
 
-#### 2. Ameaza de produtos substitutivos
+#### 2.3.2 Ameaza de produtos substitutivos
 Visto que as ameazas de novos competidores son posibles debido, sobre todo, ó reducido custo de entrar no sector, existe tamén a ameaza de produtos substitutivos, é dicir, de que os clientes se decanten por outro competidor. Por iso é importante conseguir diferenciarnos.
 
-#### 3. Análise da competencia
+#### 2.3.3 Análise da competencia
 Neste ámbito de negocio, como xa comentamos, existen empresas que xa levan tempo operando, polo que podería pensarse que vai ser un mercado competitivo. Pero tamén temos que ter en conta o crecemento de dito mercado, sobre todo relacionado coa situación sanitaria e económica actual. Os cambios que se introduzan agora (aumento das opcións de compra a distancia e entrega no domicilio) van quedar instalados na sociedade, polo que o sector vai medrar a bo ritmo e haberá sitio para máis competidores.
 Algunhas empresas da competencia poden ser JustEat, Deliveroo, UberEats, Glovo
 
@@ -167,19 +168,88 @@ Facebook, Twitter e Instagram son as principais, as que contan con máis usuario
 ### 2.8 Custos iniciais, periódicos e financiación
 
 
-### 2.10 Fontes de ingresos
+### 2.9 Fontes de ingresos
+Como fontes de ingreso principais temos os cobros por rexistro de empresas na aplicación e as comisións por pedido.
+Partiremos da base dunha implantación a nivel territorial. En Galicia existen algo máis de trescentos concellos, polo que tomaremos como base que se rexistra na aplicación unha empresa por cada dous concellos. Deste modo, teremos, mínimo, cento cincuenta empresas rexistradas. A nosa expectativa é un ritmo de rexistro de dez empresas ó mes.
+Así, definiremos tres posibles escenarios de funcionamento da nosa empresa, dende un escenario óptimo, no que as cifras alcanzadas en canto a volume de negocio son altas, ata un escenario desfavorable, no que as cifras do volume de negocio non son moi favorables.
 
 
+- Escenario desfavorable:
+Pedidos por empresa / mes
+5
+Prezo medio pedido
+15 €
+Comisión por pedido
+0,20 €
+Cantidade de empresas (media)
+60
+Prezo alta aplicación
+60 €
+Total anual
+10.800 €
 
+
+- Escenario medio:
+Pedidos por empresa / mes
+10
+Prezo medio pedido
+15 €
+Comisión por pedido
+0,20 €
+Cantidade de empresas (media)
+60
+Prezo alta aplicación
+60 €
+Total anual
+21.600 €
+
+
+- Escenario óptimo:
+Pedidos por empresa / mes
+15
+Prezo medio pedido
+20 €
+Comisión por pedido
+0,20 €
+Cantidade de empresas (media)
+60
+Prezo alta aplicación
+60 €
+Total anual
+43.200 €
+
+
+Vemos que, no peor dos casos, cunhas malas cifras de negocio, o beneficio anual só desas dúas variables sería de 10.800€. Pero se tomamos como referencia un escenario medio, o valor dos ingresos serían de aproximadamente 21.600 €.
+Aínda así hai que ter en conta que son cifras estimativas moi baixas. O normal é que tanto o prezo medio do pedido como o número de pedidos sexa superior, así como tameń o número de empresas rexistradas, polo que a marxe de beneficios aumentaría.
 
 
 ## 3. Estudo técnico
 
-### 3.1 Requerimentos de hardware e software
+### 3.1 Tecnoloxías escollidas e xustificación
+Esta aplicación dará servizo a dous tipos de usuarios distintos:
+- Usuarios anónimos:
+Son os clientes finais, que poden acceder á plataforma para facer os seus pedidos de comida de entre as opcións que poñan á súa disposición os administradores dos restaurantes rexistrados.
+
+- Administradores de restaurantes:
+Poderán rexitrarse na aplicación e engadir as súas empresas xunto cos seus produtos. Terán a capacidade de engadir categorías e produtos propios.
+
+As tecnoloxías que se utilizan son todas libres e de código aberto, polo que non existirá un sobrecusto neste aspecto en termos de licenzas.
+Para o desenvolvemento da aplicación utilízase a linguaxe de programación Python (versión 3.7) a través do framework Django (versión 3.1).
+En canto á base de datos, utilízase SQLite. É software de dominio público.
 
 
 ### 3.2 Funcionamento xeral
+- Usuarios anónimos:
+Nada máis entrar na páxina principal da apliación, terán á súa disposición unha serie de restaurantes nos que entrar para ver os produtos que ofrecen e engadilos ó seu carriño da compra para facer o pedido.
+Ó entrar nun restaurante, poden seleccionar os produtos, que se irán engadindo ó carriño. Unha vez rematado, poderán proceder a ver o pedido, pulsando no botón de ‘pagar’ e, a continuación, poderán pagar o seu pedido despois de indicar a súa dirección.
 
+- Usuarios administradores:
+Para rexistrar o seu negocio, terán un enlace na páxina principal (Restaurante: Únete) no que introducirán un email de contacto e recibirán unha ligazón. Unha vez que fagan click nesa ligazón, poderán rexistrarse como usuarios na aplicación.
+A continuación, poderán loguearse. Unha vez logueados, terán á súa disposición un apartado para administrar o seu negocio. A primeira vez que entren terán que engadir o seu restaurante. Unha vez que este sexa creado, poderán ir engandindo categorías e, dentro de cada categoría, os produtos que desexen.
+Poderán crear, ver, modificar ou eliminar tanto as categorías como os produtos.
+
+
+### 3.3 Modelo de dominio
 
 
 ## 4. Conclusións

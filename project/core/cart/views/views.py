@@ -29,6 +29,12 @@ def add(request, product_id):
     cart.add(product)
     return redirect('company:detail', company_id)
 
+def delete(request, product_id, company_id):
+    product = Product.objects.get(id=product_id)
+    cart = Cart(request.session)
+    cart.remove(product)
+    return redirect('company:detail', company_id)
+
 def clear(request, company_id, **kwargs):
     # company_id = kwargs['company_id']
     cart = Cart(request.session)
