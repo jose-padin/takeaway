@@ -22,7 +22,8 @@ class SendEmailForm(forms.Form):
         
     def send_email(self):
         template = loader.get_template('restaurant/email.html')
-        url = 'http://localhost:9988/user/add'
+        # url = 'http://localhost:9988/user/add'
+        url = 'http://takeaway.jose-castro.com/user/add'
         
         html_message = template.render({
             'url': url
