@@ -242,7 +242,6 @@ Así, definiremos tres posibles escenarios de funcionamento da nosa empresa, den
 
 - Escenario desfavorable:
 | Pedidos por empresa / mes     	| 10       	|
-|-------------------------------	|----------	|
 | Prezo medio pedido            	| 15 €     	|
 | Comisión por pedido           	| 3 €      	|
 | Cantidade de empresas (media) 	| 60       	|
@@ -252,7 +251,6 @@ Así, definiremos tres posibles escenarios de funcionamento da nosa empresa, den
 
 - Escenario medio:
 | Pedidos por empresa / mes     	| 20       	|
-|-------------------------------	|----------	|
 | Prezo medio pedido            	| 20 €     	|
 | Comisión por pedido           	| 4 €      	|
 | Cantidade de empresas (media) 	| 60       	|
@@ -262,7 +260,6 @@ Así, definiremos tres posibles escenarios de funcionamento da nosa empresa, den
 
 - Escenario óptimo:
 | Pedidos por empresa / mes     	| 30       	|
-|-------------------------------	|----------	|
 | Prezo medio pedido            	| 20 €     	|
 | Comisión por pedido           	| 4 €      	|
 | Cantidade de empresas (media) 	| 60       	|
@@ -273,7 +270,6 @@ Así, definiremos tres posibles escenarios de funcionamento da nosa empresa, den
 Ingresos segundo ano:
 - Escenario medio:
 | Pedidos por empresa / mes     	| 20       	                        |
-|-------------------------------	|----------	                        |
 | Prezo medio pedido            	| 20 €     	                        |
 | Comisión por pedido           	| 4 €      	                        |
 | Rexistro novas empresas          	| 12 (10 % máis que ano anterior)   |
