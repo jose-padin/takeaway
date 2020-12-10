@@ -1,6 +1,34 @@
-## English
+Takeaway
+Proxecto DAW – IES Chan do Monte
+Autor: José Benito Méndez Padín
 
-## Castellano
+ÍNDICE DE CONTIDOS
+1 – Introdución								                        2
+2 – Estudo empresarial							                    2
+	2.1 – Obectivos
+		2.1.1 – Que queremos satisfacer?
+		2.1.2 – Como o imos facer?
+		2.1.3 – A quen nos diriximos?
+	2.2 – Motivación e xustifiación da idea
+	2.3 – Análise do microentorno: cinco forzas de Porter
+		2.3.1 – Ameaza de novos competidores
+		2.3.2 – Ameaza de produtos substitutivos
+		2.3.3 – Análise da competencia
+	2.4 – Análise DAFO
+	2.5 – Análise CAME
+	2.6 – Forma xurídica
+	2.7 – Plan de márketing
+		2.7.1 – Público obxectivo e segmentación
+		2.7.2 – Produto / Servizo
+		2.7.3 – Prezo
+		2.7.4 – Comunicación
+	2.8 – Custos iniciais, periódicos e financiación
+	2.9 – Fontes de ingresos
+3 – Estudo técnico								                    14
+	3.1 – Tecnoloxías escollidas e xustificación
+	3.2 – Funcionamento xeral
+	3.3 – Modelo de dominio
+4 – Conclusións								                        16
 
 ## Galego
 ## 1. Introdución
@@ -61,12 +89,14 @@ Visto que as ameazas de novos competidores son posibles debido, sobre todo, ó r
 Neste ámbito de negocio, como xa comentamos, existen empresas que xa levan tempo operando, polo que podería pensarse que vai ser un mercado competitivo. Pero tamén temos que ter en conta o crecemento de dito mercado, sobre todo relacionado coa situación sanitaria e económica actual. Os cambios que se introduzan agora (aumento das opcións de compra a distancia e entrega no domicilio) van quedar instalados na sociedade, polo que o sector vai medrar a bo ritmo e haberá sitio para máis competidores.
 Algunhas empresas da competencia poden ser JustEat, Deliveroo, UberEats, Glovo
 
-|  					Empresa 				   |  					Actividade 					e marca 				                                                      |
-|-------------|---------------------------------------------------------------------------|
-|  					JustEat 				   |  					Amplo 					catálogo  					  					Interface 					sinxela  					  					Pago 					efectivo / tarxeta / PayPal 				 |
-|  					Deliveroo 				 |  					Interface 					coidada  					  					Servizo 					de máis calidade 				                           |
-|  					UberEats 				  |  					Pago 					con tarxeta só 				                                                     |
-|  					Glovo 				     |  					Servizo 					de mensaxería (recoller e entregar) 				                             |
+| Empresa   	| Actividade e marca                                                                                                         	|
+|-----------	|----------------------------------------------------------------------------------------------------------------------------	|
+| JustEat   	| Amplo catálogo  Interface sinxela  Pago efectivo / tarxeta / PayPal  Taxa de apertura 450 €  Comisión 30 % + IVA por envío 	|
+| Deliveroo 	| Interface coidadaServizo de máis calidadeTaxa de apertura de 324 € + IVAComisión do 35 % + IVA por envío                   	|
+| UberEats  	| Pago con tarxeta sóComisión do 30 % + IVA + 0.20 € por envío                                                               	|
+| Glovo     	| Servizo de mensaxería (recoller e entregar)Taxa de apertura de 150 € + IVAComisión do 40 % + IVA                           	|			                             |
+Vemos que existe unha forte competencia, con marcas moi coñecidas, pero que é posible competir con elas se conseguimos crear unha forte imaxe de marca.
+
 
 ### 2.4 Análise DAFO
 2.4.1 Análise interna:
@@ -148,25 +178,61 @@ Trámites complementarios:
 
 ### 2.7 Plan de márketing
 
-2.7.2 Público obxectivo e segmentación
+2.7.1 Público obxectivo e segmentación
 Aquí temos dous enfoques distintos, posto que queremos chegar a dous tipos distintos de público. Por un lado, queremos chegar ás empresas de hostalaría para que contraten os nosos servizos. Polo outro, precisamos chegar a un público máis amplo, dende adolescentes ata persoas adultas para que utilicen a nosa aplicación como a ferramenta principal para pedir comida.
 
 Con respecto a este último grupo obxectivo, interésanos que nos vexa a maior cantidade posible de xente, non atendendo a segmentacións de clase social, xa que en xeral todos poden facer uso deste tipo de servizos. E máis na situación actual de crise sanitaria, na que existe certa inseguridade á hora de saír a comer fóra do domicilio.
 
-2.7.3 Produto / Servizo
+2.7.2 Produto / Servizo
 O noso servizo consiste en servir de intermediario entre o cliente final e un comercio hostaleiro. Polo tanto, ofrecemos ó cliente final unha forma sinxela e rápida de pedir comida (a domicilio ou para recoller) e, por outro lado, ofrecemos ós negocios de hostalaría a posibilidade de chegar a máis público ó ofrecer os seus produtos con nós.
 
-2.7.4 Prezo
+2.7.3 Prezo
 Analizando os prezos que manexa a competencia no sector, podemos ofrecer un servizo con prezos algo máis axustados e máis beneficiosos para os nosos clientes. A continuación mostramos unha táboa cos prezos que utilizaremos nun primeiro momento, podendo actualizalos conforme vaia pasando o tempo.
 
-2.7.5 Comunicación
+2.7.4 Comunicación
 A comunicación vai ser imprescindible para chegar ó noso público obxectivo e conseguir ser unha opción elixible dentro do sector
 A presenza en redes sociais é fundamental, xa que gran parte de poboación participa dalgunha forma, xa sexa activa ou pasiva, nalgunha rede social. Máis da metade da poboación mundial ten algunha rede social.
 Facebook, Twitter e Instagram son as principais, as que contan con máis usuarios e, polo tanto, ofrecen a posibilidade de chegar a máis xente.
 
 
 ### 2.8 Custos iniciais, periódicos e financiación
+Os custos iniciais compóñense de:
+- gasto en equipo informático: aproximadamente 3.500 €
+- capital social: 3.000 €
+- gastos de notaría: aproximadamente 300 €
+- inscrición rexistro mercantil: 100 €
+- outros gastos de rexistro da empresa: 50 €
+Total gastos fixos: 6950 €
 
+Dentro dos custos periódicos podemos incluír: 
+- gastos de asesoría e xestoría: 150 € / mes
+- márketing: aproximadamente 2.400 € / ano
+- pago de subministros: aproximadamente 1.500 € / ano
+- salarios: aproximadamente 5.800 € / mes
+- servidores: aproximadamente 100 € / mes
+- devolución préstamo: 583 € / mes
+Total gastos periódicos: 95.096 €
+
+En canto á financiación, contamos con:
+- financiación propia: 15.000 €
+- préstamo: 50.000 € a devolver en 10 anos (4 % de interese)
+
+Polo tanto, contando coa financiación propia, o préstamo bancario e máis os beneficios da actividade económica, poderiamos difrenciar dous escenarios de financiación anual:
+
+- Escenario medio: 15.000 + 50.000 + 61.200 = 126.200 €
+
+- Escenario óptimo: 15.000 + 50.000 + 90.000 = 155.000 €
+
+Balance:
+- Primeiro ano:
+	- Beneficios: 126.200 €
+	- Gastos: 102.046 €
+	- Balance: +24.154 €
+
+- Segundo ano:
+	- Beneficios: 127.440 €
+	- Gastos: 88.100 €
+	- Balance: +39.340 €
 
 ### 2.9 Fontes de ingresos
 Como fontes de ingreso principais temos os cobros por rexistro de empresas na aplicación e as comisións por pedido.
@@ -175,52 +241,49 @@ Así, definiremos tres posibles escenarios de funcionamento da nosa empresa, den
 
 
 - Escenario desfavorable:
-Pedidos por empresa / mes
-5
-Prezo medio pedido
-15 €
-Comisión por pedido
-0,20 €
-Cantidade de empresas (media)
-60
-Prezo alta aplicación
-60 €
-Total anual
-10.800 €
+| Pedidos por empresa / mes     	| 10       	|
+|-------------------------------	|----------	|
+| Prezo medio pedido            	| 15 €     	|
+| Comisión por pedido           	| 3 €      	|
+| Cantidade de empresas (media) 	| 60       	|
+| Prezo alta aplicación         	| 60 €     	|
+| Total anual                   	| 25.200 € 	|
 
 
 - Escenario medio:
-Pedidos por empresa / mes
-10
-Prezo medio pedido
-15 €
-Comisión por pedido
-0,20 €
-Cantidade de empresas (media)
-60
-Prezo alta aplicación
-60 €
-Total anual
-21.600 €
+| Pedidos por empresa / mes     	| 20       	|
+|-------------------------------	|----------	|
+| Prezo medio pedido            	| 20 €     	|
+| Comisión por pedido           	| 4 €      	|
+| Cantidade de empresas (media) 	| 60       	|
+| Prezo alta aplicación         	| 60 €     	|
+| Total anual                   	| 61.200 € 	|
 
 
 - Escenario óptimo:
-Pedidos por empresa / mes
-15
-Prezo medio pedido
-20 €
-Comisión por pedido
-0,20 €
-Cantidade de empresas (media)
-60
-Prezo alta aplicación
-60 €
-Total anual
-43.200 €
+| Pedidos por empresa / mes     	| 30       	|
+|-------------------------------	|----------	|
+| Prezo medio pedido            	| 20 €     	|
+| Comisión por pedido           	| 4 €      	|
+| Cantidade de empresas (media) 	| 60       	|
+| Prezo alta aplicación         	| 60 €     	|
+| Total anual                   	| 90.000 € 	|
 
 
-Vemos que, no peor dos casos, cunhas malas cifras de negocio, o beneficio anual só desas dúas variables sería de 10.800€. Pero se tomamos como referencia un escenario medio, o valor dos ingresos serían de aproximadamente 21.600 €.
-Aínda así hai que ter en conta que son cifras estimativas moi baixas. O normal é que tanto o prezo medio do pedido como o número de pedidos sexa superior, así como tameń o número de empresas rexistradas, polo que a marxe de beneficios aumentaría.
+Ingresos segundo ano:
+- Escenario medio:
+| Pedidos por empresa / mes     	| 20       	                        |
+|-------------------------------	|----------	                        |
+| Prezo medio pedido            	| 20 €     	                        |
+| Comisión por pedido           	| 4 €      	                        |
+| Rexistro novas empresas          	| 12 (10 % máis que ano anterior)   |
+| Cantidade de empresas (media) 	| 60       	                        |
+| Prezo alta aplicación         	| 60 €     	                        |
+| Total anual                   	| 127.440 €	                        |
+
+
+Vemos que, no peor dos casos, cunhas malas cifras de negocio, o beneficio anual só desas dúas variables sería de 25.200€. Pero se tomamos como referencia un escenario medio, o valor dos ingresos serían de aproximadamente 46.800 €.
+Aínda así hai que ter en conta que son cifras estimativas moi baixas. O normal é que tanto o prezo medio do pedido como o número de pedidos sexa superior, así como tameń o número de empresas rexistradas, polo que a marxe de beneficios aumentaría. Así, nunha estamación medianamente optimista, os beneficios anuais ascenderían a aproximadamente 90.000 €.
 
 
 ## 3. Estudo técnico
@@ -253,3 +316,6 @@ Poderán crear, ver, modificar ou eliminar tanto as categorías como os produtos
 
 
 ## 4. Conclusións
+Recapitulando as conclusións das análises realizadas ata agora, entendemos que o proxecto conta co beneficio do tempo no que xorde, no que o comercio a través de internet está en gran aumento.
+En canto ós traballadores da empresa, nun primeiro momento contaremos con tres traballadores, un dos cales será o socio creador da sociedade limitada, polo que os gastos de pagar salarios anuais pode verse reducido, ampliando positivamente o balance da empresa.
+En definitiva, podemos dicir que, despois de revisar tódalas análises anteriores, o proxecto é viable en tódolos aspectos. Pero, sobre todo, é viable no aspecto máis importante, o económico, pois xa dende o primeiro exercicio se espera ter un balance positivo.

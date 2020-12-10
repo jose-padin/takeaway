@@ -22,6 +22,11 @@ class BaseUser(AbstractUser):
         verbose_name=_('email'),
         unique=True
     )
+    username = models.CharField(
+        verbose_name=_('username'),
+        max_length=120,
+        unique=False
+    )
     type = models.CharField(
         verbose_name=_('type'),
         max_length=50,
@@ -30,7 +35,7 @@ class BaseUser(AbstractUser):
     )
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = []
+    REQUIRED_FIELDS = ['username']
 
     class Meta:
         db_table = _('baseuser')
