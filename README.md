@@ -3,8 +3,8 @@ Proxecto DAW – IES Chan do Monte
 Autor: José Benito Méndez Padín
 
 ÍNDICE DE CONTIDOS
-1 – Introdución								                        2
-2 – Estudo empresarial							                    2
+1. – Introdución
+2. – Estudo empresarial
 	2.1 – Obectivos
 		2.1.1 – Que queremos satisfacer?
 		2.1.2 – Como o imos facer?
@@ -24,13 +24,13 @@ Autor: José Benito Méndez Padín
 		2.7.4 – Comunicación
 	2.8 – Custos iniciais, periódicos e financiación
 	2.9 – Fontes de ingresos
-3 – Estudo técnico								                    14
+3. – Estudo técnico
 	3.1 – Tecnoloxías escollidas e xustificación
 	3.2 – Funcionamento xeral
 	3.3 – Modelo de dominio
-4 – Conclusións								                        16
+4. – Conclusións
 
-## Galego
+
 ## 1. Introdución
 Este proxecto consiste no desenvolvemento dunha aplicación dirixida ó sector hostaleiro do mercado.
 
